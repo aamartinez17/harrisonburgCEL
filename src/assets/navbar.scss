@@ -1,0 +1,155 @@
+/* Navbar Styling */
+ header {
+    position: relative;
+
+ .navbar {
+    position: fixed;
+    top:0;
+    width: 100%;
+    background-color: v.$wg-bg-white;
+    box-shadow: 0 0 0 0.2rem rgba(v.$wg-accent-light, .5); // Consistent focus ring
+    opacity: .8;
+    z-index: 10;
+    .nav-link {
+        color: v.$wg-primary; // e.g., White text on gold background
+        transition: color 0.2s ease-in-out;
+
+        &.active {
+            color: v.$wg-accent; // A distinct but complementary color like Linen
+            & span {
+                border-bottom: 2px solid v.$wg-secondary;
+            }
+            
+            // border-width: ;
+        }
+
+        &:hover {
+            color: v.$wg-accent-dark; // Same as active, or a slightly less intense version
+        }
+
+        // &:focus {
+        //     color: v.$wg-accent-dark; // Ensure text color remains clear
+        // }
+    }
+
+    
+
+
+    .navbar-brand {
+        // background-color: v.$primary;
+
+        img {
+            height: 30px;
+            // display: none;
+        }
+    }
+
+    .navbar-toggler {
+        border-color: v.$wg-text-light; // Toggler border color
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(v.$wg-accent-light, 0.45); // Consistent focus ring
+            border-color: v.$wg-text-light;
+        }
+        .navbar-toggler-icon {
+            // Background image uses fill='%23ffffff' for white icon;
+            // if you change v.$wg-text-on-primary to a dark color for dark navbar,
+            // you might need to adjust this SVG fill color dynamically if possible,
+            // or provide a different SVG for dark togglers.
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(3, 98, 100)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+    }
+
+    &-login {
+        position: absolute;
+        right: 0;
+        height: 100%;
+
+        #navbar-signin-btn {
+            background-color: v.$primary;
+            color: v.$wg-accent;
+
+            &:hover {
+                // background-color: v.$wg-gray;
+                color: v.$wg-gray;
+            }
+        }
+        #navbar-register-btn {
+            background-color: v.$wg-accent;
+            color: v.$primary;
+
+            &:hover {
+                // background-color: v.$wg-secondary;
+                color: v.$wg-gray;
+            }
+        }
+
+        .nav-link{
+            padding-top: 15px;
+            padding-right: 15px;
+            padding-left: 15px;
+            text-decoration: none;
+            border: none;
+
+        }
+
+        div {
+            height: 100%;
+        }
+    }
+}
+ }
+
+.collapsing {
+    transition: height 0.35s ease;
+}
+
+/* This media query targets screens smaller than 768px (Bootstrap's 'md' breakpoint) */
+  @media (max-width: 767.98px) {
+    /*
+      When the navbar is collapsed, we want the auth links (Sign In, etc.)
+      to stack vertically like the other menu items, not stay in a row.
+    */
+
+    .navbar-collapse .navbar-login {
+        /* Change flex direction to stack vertically */
+        position: static;
+        flex-direction: column;
+        /* Align items to the start (left) */
+    //   align-items: flex-start;
+      /* Add some spacing and a visual separator from the main links */
+    //   margin-top: 0.5rem;
+    //   padding-top: 0.5rem;
+    //   border-top: 1px solid rgba(255, 255, 255, 0.1);
+     #navbar-signin-btn {
+            // background-color: v.$wg-bg-white;
+            padding-left: 0;
+            padding-left: 0.5rem;
+            // color: v.$wg-primary;
+
+            &:hover {
+                // background-color: v.$wg-gray;
+                color: v.$primary;
+            }
+        }
+        #navbar-register-btn {
+            background-color: v.$wg-accent;
+            color: v.$primary;
+            padding-left: 0.5rem;
+
+            &:hover {
+                // background-color: v.$wg-secondary;
+                color: v.$primary;
+            }
+        }
+    }
+
+    .navbar-collapse .navbar-nav{
+      /* Align items to the start (left) */
+      align-items: flex-start;
+      /* Add some spacing and a visual separator from the main links */
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      padding-left: 0.5rem;
+    //   border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }

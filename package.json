@@ -10,7 +10,11 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "vue": "^3.5.17"
+    "bootstrap": "^5.3.7",
+    "bootstrap-icons": "^1.13.1",
+    "firebase": "^12.0.0",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
