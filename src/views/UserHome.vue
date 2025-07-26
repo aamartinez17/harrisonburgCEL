@@ -47,8 +47,8 @@ onMounted(() => {
 
     <!-- Section 2: Who We Are -->
     <section class="py-5 home-section-2">
-      <div class='justify-content-center'>
-        <div class="row align-items-center justify-content-center">
+  <div class="container">
+    <div class="row align-items-center justify-content-center">
           <div class="col-lg-4 animate-on-scroll slide-in-left mission-statement">
             <h2 class="display-5 fw-bold mb-3">Nuestra Misión</h2>
             <p class="text-muted fs-5">
@@ -63,13 +63,13 @@ onMounted(() => {
     </section>
 
     <!-- Section 3: What We Offer -->
-    <section class="bg-light my-5 home-section-3">
+    <section class="bg-light py-5 home-section-3">
       <div class="container">
         <div class="text-center mb-5">
           <h2 class="display-5 fw-bold">¿Qué Ofrecemos?</h2>
           <p class="lead text-muted">Beneficios exclusivos para nuestros miembros.</p>
         </div>
-        <div class="row">
+        <div class="row g-4">
           <!-- Card 1: Networking -->
           <div class="col-lg-4 d-flex align-items-stretch animate-on-scroll fade-in-up">
             <div class="card text-center shadow-sm w-100">

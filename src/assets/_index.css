@@ -126,7 +126,7 @@
 
 /* Slide-in from right animation */
 .slide-in-right {
-  transform: translateX(50px);
+  transform: translateX(-50px);
 }
 
 .slide-in-right.visible {
@@ -275,21 +275,6 @@ header .navbar-login div {
     padding-left: 0.5rem;
   }
 }
-body {
-  font-family: "Inter", sans-serif;
-  color: #212121;
-  line-height: 1.6;
-  background-color: #F5F5F5;
-  min-height: 100vh;
-  display: block;
-  align-items: center;
-  justify-content: center;
-}
-body h1, body h2, body h3 {
-  font-weight: 700;
-  color: #0a3e8b;
-}
-
 /* --- Animation --- */
 @keyframes fadeInUp {
   from {
