@@ -68,7 +68,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="profile-page bg-light">
+  <div class="profile-page">
     <div class="container py-5">
 
       <!-- Profile Header -->
@@ -157,20 +157,5 @@ onMounted(() => {
 </template>
 
 <style scoped>
-.profile-picture {
-  width: 150px;
-  height: 150px;
-  border: 4px solid #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
-}
-.card-header {
-    border-bottom: 0;
-}
-.list-group-item i {
-    color: var(--bs-primary);
-    transition: color 0.2s ease-in-out;
-}
-.list-group-item:hover i {
-    color: var(--bs-primary-dark);
-}
+
 </style>

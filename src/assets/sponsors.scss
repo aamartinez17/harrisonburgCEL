@@ -1,0 +1,104 @@
+@use '_variables' as v;
+
+.sponsors-page {
+    padding-top: 80px;
+}
+
+/* Ticker Styles */
+.ticker-wrap {
+    width: 100%;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  border-bottom: 1px solid v.$wg-accent;
+  border-top: 1px solid v.$wg-accent;
+  /* Fades the edges of the ticker */
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.ticker-track {
+  display: flex;
+  /* Animation: name, duration, timing-function, iteration-count */
+  animation: scroll 40s linear infinite;
+  width: calc(250px * 10); /* (estimated item width) * (number of items * 2) */
+}
+
+.ticker-item {
+  flex-shrink: 0;
+  width: 250px;
+  text-align: center;
+  font-weight: 500;
+  color: #6c757d;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Moves the track left by half its width, creating the loop */
+    transform: translateX(-50%);
+  }
+}
+
+/* General Page Styles */
+.sponsors-page {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Gold Tier Styles */
+.sponsor-tier-gold {
+  padding: 0 1rem 1rem 1rem;
+  border-bottom: 1px solid #eee;
+  background-color: v.$wg-bg-gray-light;
+  border-bottom: 1px solid v.$wg-accent;
+  border-top: 1px solid v.$wg-accent;
+  
+}
+.tier-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+
+  &-gold {
+    color: #d4af37;
+  }
+
+  &-silver {
+    color: #adb5bd; /* Silver color */
+  }
+
+  &-bronze {
+    color: #cd7f32; /* Bronze color */
+  }
+
+
+}
+.tier-title span {
+  font-size: 1.5rem;
+}
+
+/* Silver Tier Styles */
+.sponsor-tier-silver {
+  border: none;
+  max-width: 800px;
+  padding: 0 2rem;
+  padding-bottom: 2rem;
+
+  img {
+    border-radius: 10px;
+  }
+}
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Bronze Tier Styles */
+.sponsor-tier-bronze {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid #f1f1f1;
+}

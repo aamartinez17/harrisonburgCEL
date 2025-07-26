@@ -1,0 +1,35 @@
+@use "_variables" as v;
+.contact-info-panel {
+  border-top-right-radius: var(--bs-card-border-radius);
+  border-bottom-right-radius: var(--bs-card-border-radius);
+  background-color: v.$wg-primary-darker;
+}
+
+/* Ensure the info panel has rounded corners on mobile when it stacks */
+@media (max-width: 991.98px) {
+  .contact-info-panel {
+    border-radius: 0 0 var(--bs-card-border-radius) var(--bs-card-border-radius);
+  }
+}
+
+.list-unstyled i {
+    color: v.$wg-bg-white;
+}
+
+.contact-us-page {
+    background-color: v.$wg-bg-gray-light;
+    .container {
+        margin-top: 80px;
+    }
+    
+
+    .btn {
+        background-color: v.$primary;
+        color: v.$wg-bg-white;
+
+        &:hover {
+            background-color: v.$wg-primary-light;
+            color: v.$wg-bg-white;
+        }
+    }
+}

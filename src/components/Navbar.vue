@@ -14,9 +14,10 @@
                 <div class="navbar-nav">
                     <router-link class="nav-link" aria-current="page" to="/home"><span>Home</span></router-link>
                     <router-link class="nav-link" to="/contact-Us"><span>Contact Us</span></router-link>
+                    <router-link class="nav-link" to="/sponsors"><span>Sponsors</span></router-link>
                     <template v-if="authReady">
                         <router-link class="nav-link" v-if="isLoggedIn" to="/profile"><span>Profile</span></router-link>
-                        <router-link class="nav-link" v-if="isLoggedIn" to="/account"><span>Account</span></router-link>
+                        <!-- <router-link class="nav-link" v-if="isLoggedIn" to="/account"><span>Account</span></router-link> -->
                     </template>
                     
                     

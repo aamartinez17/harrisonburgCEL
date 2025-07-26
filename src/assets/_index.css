@@ -174,7 +174,11 @@ header .navbar {
   background-color: #fdfdfd;
   box-shadow: 0 0 0 0.2rem rgba(255, 209, 128, 0.5);
   opacity: 0.8;
+  transition: opacity 1s ease;
   z-index: 10;
+}
+header .navbar:has(.navbar-collapse.collapsing), header .navbar:has(.navbar-collapse.show) {
+  opacity: 1;
 }
 header .navbar .nav-link {
   color: #0a3e8b;
@@ -275,6 +279,165 @@ header .navbar-login div {
     padding-left: 0.5rem;
   }
 }
+.contact-info-panel {
+  border-top-right-radius: var(--bs-card-border-radius);
+  border-bottom-right-radius: var(--bs-card-border-radius);
+  background-color: rgb(6.5771812081, 40.7785234899, 91.4228187919);
+}
+
+/* Ensure the info panel has rounded corners on mobile when it stacks */
+@media (max-width: 991.98px) {
+  .contact-info-panel {
+    border-radius: 0 0 var(--bs-card-border-radius) var(--bs-card-border-radius);
+  }
+}
+.list-unstyled i {
+  color: #fdfdfd;
+}
+
+.contact-us-page {
+  background-color: #F5F5F5;
+}
+.contact-us-page .container {
+  margin-top: 80px;
+}
+.contact-us-page .btn {
+  background-color: #0a3e8b;
+  color: #fdfdfd;
+}
+.contact-us-page .btn:hover {
+  background-color: rgb(13.4228187919, 83.2214765101, 186.5771812081);
+  color: #fdfdfd;
+}
+
+.profile-page {
+  background-color: #F5F5F5;
+  padding-top: 80px;
+}
+.profile-page .container {
+  background-color: #F5F5F5;
+}
+.profile-page .profile-picture {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.profile-page .card-header {
+  border-bottom: 0;
+}
+.profile-page .list-group-item i {
+  color: rgb(13.4228187919, 83.2214765101, 186.5771812081);
+  transition: color 0.2s ease-in-out;
+}
+.profile-page .list-group-item:hover i {
+  color: rgb(3.1543624161, 19.5570469799, 43.8456375839);
+}
+.profile-page .card-body .btn-primary {
+  background-color: #0a3e8b;
+}
+.profile-page .card-body .btn-primary:hover {
+  background-color: rgb(13.4228187919, 83.2214765101, 186.5771812081);
+}
+
+.sponsors-page {
+  padding-top: 80px;
+}
+
+/* Ticker Styles */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  padding: 1rem 0;
+  border-bottom: 1px solid #bda566;
+  border-top: 1px solid #bda566;
+  /* Fades the edges of the ticker */
+  mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.ticker-track {
+  display: flex;
+  /* Animation: name, duration, timing-function, iteration-count */
+  animation: scroll 40s linear infinite;
+  width: 2500px; /* (estimated item width) * (number of items * 2) */
+}
+
+.ticker-item {
+  flex-shrink: 0;
+  width: 250px;
+  text-align: center;
+  font-weight: 500;
+  color: #6c757d;
+  white-space: nowrap;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    /* Moves the track left by half its width, creating the loop */
+    transform: translateX(-50%);
+  }
+}
+/* General Page Styles */
+.sponsors-page {
+  font-family: "Inter", sans-serif;
+}
+
+/* Gold Tier Styles */
+.sponsor-tier-gold {
+  padding: 0 1rem 1rem 1rem;
+  border-bottom: 1px solid #eee;
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #bda566;
+  border-top: 1px solid #bda566;
+}
+
+.tier-title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+}
+.tier-title-gold {
+  color: #d4af37;
+}
+.tier-title-silver {
+  color: #adb5bd; /* Silver color */
+}
+.tier-title-bronze {
+  color: #cd7f32; /* Bronze color */
+}
+
+.tier-title span {
+  font-size: 1.5rem;
+}
+
+/* Silver Tier Styles */
+.sponsor-tier-silver {
+  border: none;
+  max-width: 800px;
+  padding: 0 2rem;
+  padding-bottom: 2rem;
+}
+.sponsor-tier-silver img {
+  border-radius: 10px;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* Bronze Tier Styles */
+.sponsor-tier-bronze {
+  text-align: center;
+  padding: 1rem;
+  border-bottom: 1px solid #f1f1f1;
+}
+
 /* --- Animation --- */
 @keyframes fadeInUp {
   from {

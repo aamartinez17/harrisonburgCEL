@@ -28,7 +28,7 @@ const handleSubmit = () => {
 </script>
 
 <template>
-  <div class="contact-us-page bg-light py-5">
+  <div class="contact-us-page py-5">
     <div class="container">
 
       <!-- Page Header -->
@@ -71,12 +71,12 @@ const handleSubmit = () => {
                   <textarea class="form-control" id="message" rows="5" v-model="contactForm.message" required></textarea>
                 </div>
                 <!-- Submit Button -->
-                <button type="submit" class="btn btn-primary btn-lg">Enviar Mensaje</button>
+                <button type="submit" class="btn btn-lg">Enviar Mensaje</button>
               </form>
             </div>
 
             <!-- Right Side: Contact Information -->
-            <div class="col-lg-5 bg-dark text-white p-4 p-md-5 contact-info-panel">
+            <div class="col-lg-5 text-white p-4 p-md-5 contact-info-panel">
                <h3 class="fw-bold mb-4">Información de Contacto</h3>
                <ul class="list-unstyled">
                  <li class="d-flex align-items-start mb-4">
@@ -116,19 +116,4 @@ const handleSubmit = () => {
 </template>
 
 <style scoped>
-.contact-info-panel {
-  border-top-right-radius: var(--bs-card-border-radius);
-  border-bottom-right-radius: var(--bs-card-border-radius);
-}
-
-/* Ensure the info panel has rounded corners on mobile when it stacks */
-@media (max-width: 991.98px) {
-  .contact-info-panel {
-    border-radius: 0 0 var(--bs-card-border-radius) var(--bs-card-border-radius);
-  }
-}
-
-.list-unstyled i {
-    color: var(--bs-primary);
-}
 </style>
