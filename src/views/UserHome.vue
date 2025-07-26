@@ -63,13 +63,13 @@ onMounted(() => {
     </section>
 
     <!-- Section 3: What We Offer -->
-    <section class="bg-light py-5 home-section-3">
+    <section class="bg-light my-5 home-section-3">
       <div class="container">
         <div class="text-center mb-5">
           <h2 class="display-5 fw-bold">¿Qué Ofrecemos?</h2>
           <p class="lead text-muted">Beneficios exclusivos para nuestros miembros.</p>
         </div>
-        <div class="row g-4">
+        <div class="row">
           <!-- Card 1: Networking -->
           <div class="col-lg-4 d-flex align-items-stretch animate-on-scroll fade-in-up">
             <div class="card text-center shadow-sm w-100">

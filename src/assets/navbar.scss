@@ -4,8 +4,11 @@
 
  .navbar {
     position: fixed;
-    top:0;
-    width: 100%;
+    left: 50%;
+  transform: translateX(-50%);
+    top:20px;
+    width: 80%;
+    border-radius: 25px;
     background-color: v.$wg-bg-white;
     box-shadow: 0 0 0 0.2rem rgba(v.$wg-accent-light, .5); // Consistent focus ring
     opacity: .8;
@@ -76,6 +79,7 @@
         #navbar-register-btn {
             background-color: v.$wg-accent;
             color: v.$primary;
+            border-radius: 0 25px 25px 0;
 
             &:hover {
                 // background-color: v.$wg-secondary;
@@ -135,6 +139,8 @@
             background-color: v.$wg-accent;
             color: v.$primary;
             padding-left: 0.5rem;
+            // border: 2px red solid;
+            border-radius: 0 0  10px 10px;
 
             &:hover {
                 // background-color: v.$wg-secondary;

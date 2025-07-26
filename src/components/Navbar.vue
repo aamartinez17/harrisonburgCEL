@@ -1,6 +1,6 @@
 <template>
 <header>
-    <nav class="navbar navbar-expand-md" id="mainNavbar"> 
+    <nav class="navbar navbar-expand-md justify-content-center" id="mainNavbar"> 
         <div class="container-fluid">
             <router-link class="navbar-brand" to="/home">
                 <img src="https://placehold.co/400x400/bda566/0a3e8b?text=CEL" alt="initials">
