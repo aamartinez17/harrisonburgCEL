@@ -45,6 +45,17 @@ const router = createRouter({
         }
     ],
     linkExactActiveClass: 'active',
+    // Add this scrollBehavior function
+  scrollBehavior(to, from, savedPosition) {
+    // If the user is navigating back/forward, use the saved position
+    if (savedPosition) {
+      return savedPosition;
+    } 
+    // Otherwise, scroll to the top of the page
+    else {
+      return { top: 0 };
+    }
+  },
 });
 
 router.beforeEach(async (to, from, next) => {

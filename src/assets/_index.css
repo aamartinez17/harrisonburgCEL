@@ -172,9 +172,10 @@ header .navbar {
   width: 80%;
   border-radius: 25px;
   background-color: #fdfdfd;
-  box-shadow: 0 0 0 0.2rem rgba(255, 209, 128, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(189, 165, 102, 0.5);
   opacity: 0.8;
   transition: opacity 1s ease;
+  padding: 0;
   z-index: 10;
 }
 header .navbar:has(.navbar-collapse.collapsing), header .navbar:has(.navbar-collapse.show) {
@@ -194,7 +195,7 @@ header .navbar .nav-link:hover {
   color: rgb(167.6712328767, 141.3698630137, 72.3287671233);
 }
 header .navbar .navbar-brand img {
-  height: 30px;
+  height: 50px;
 }
 header .navbar .navbar-toggler {
   border-color: #fdfdfd;
@@ -270,19 +271,17 @@ header .navbar-login div {
   .navbar-collapse .navbar-login #navbar-register-btn:hover {
     color: #0a3e8b;
   }
-  .navbar-collapse .navbar-nav {
+  .navbar .navbar-collapse {
     /* Align items to the start (left) */
     align-items: flex-start;
     /* Add some spacing and a visual separator from the main links */
-    margin-top: 0.5rem;
-    padding-top: 0.5rem;
-    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 .contact-info-panel {
   border-top-right-radius: var(--bs-card-border-radius);
   border-bottom-right-radius: var(--bs-card-border-radius);
-  background-color: rgb(6.5771812081, 40.7785234899, 91.4228187919);
+  background-color: #0a3e8b;
 }
 
 /* Ensure the info panel has rounded corners on mobile when it stacks */
@@ -438,6 +437,144 @@ header .navbar-login div {
   border-bottom: 1px solid #f1f1f1;
 }
 
+/* Custom font styles for the "CasaTech" logo */
+.font-casa {
+  font-family: "Lora", serif;
+}
+
+.font-tech {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Visually hide text for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Main footer styling */
+.footer {
+  background-color: #0a3e8b;
+  color: white;
+}
+
+.footer-container {
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem;
+  /* Divider */
+}
+.footer-container .divider {
+  border-color: #fdfdfd; /* border-gray-700 */
+  border-top-width: 1px;
+}
+
+/* Top Section: Social + Buttons */
+.top-section {
+  padding-top: 1rem;
+  /* padding-bottom: 2rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; /* Default for mobile */
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem; /* space-x-6 */
+  /* margin-bottom: 1.5rem; */
+}
+
+.social-link {
+  color: #9ca3af; /* text-gray-400 */
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: white; /* hover:text-white */
+}
+
+.social-link i {
+  font-size: 1.5rem; /* Corresponds to fa-2x */
+  line-height: 2rem;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* space-x-4 */
+}
+
+.btn {
+  padding: 0.5rem 1.5rem; /* px-6 py-2 */
+  font-weight: 600;
+  border-radius: 9999px; /* rounded-full */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+.btn.btn-signin {
+  color: white;
+  border: 1px solid #4b5563; /* border-gray-600 */
+}
+.btn.btn-signin:hover {
+  background-color: #8c8c8c;
+}
+.btn.btn-register, .btn.btn-logout {
+  color: #111827; /* text-gray-900 */
+  background-color: white;
+  font-weight: 700;
+}
+.btn.btn-register:hover, .btn.btn-logout:hover {
+  background-color: #e5e7eb; /* hover:bg-gray-200 */
+  color: #000;
+}
+
+/* Bottom Section */
+.bottom-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsorship-text {
+  color: #8c8c8c; /* text-gray-500 */
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem;
+}
+
+.casatech-link {
+  display: inline-flex; /* Use flexbox to remove space between spans */
+  color: #d1d5db; /* text-gray-300 */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.casatech-link:hover {
+  color: white;
+}
+
+.casatech-link:hover {
+  color: white;
+}
+
+/* Responsive styles for medium screens and up (md breakpoint in Tailwind) */
+@media (min-width: 768px) {
+  .top-section {
+    flex-direction: row;
+  }
+  .social-links {
+    margin-bottom: 0;
+  }
+}
 /* --- Animation --- */
 @keyframes fadeInUp {
   from {

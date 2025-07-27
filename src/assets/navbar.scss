@@ -22,8 +22,9 @@
     width: 80%;
     border-radius: 25px;
     background-color: v.$wg-bg-white;
-    box-shadow: 0 0 0 0.2rem rgba(v.$wg-accent-light, .5); // Consistent focus ring
+    box-shadow: 0 0 0 0.2rem rgba(v.$wg-accent, .5); // Consistent focus ring
     @include handle-navbar-opacity;
+    padding: 0;
 
     z-index: 10;
     .nav-link {
@@ -55,7 +56,7 @@
         // background-color: v.$primary;
 
         img {
-            height: 30px;
+            height: 50px;
             // display: none;
         }
     }
@@ -163,13 +164,14 @@
         }
     }
 
-    .navbar-collapse .navbar-nav{
+    .navbar .navbar-collapse{
       /* Align items to the start (left) */
       align-items: flex-start;
       /* Add some spacing and a visual separator from the main links */
-      margin-top: 0.5rem;
-      padding-top: 0.5rem;
-      padding-left: 0.5rem;
+    //   margin-top: 0.5rem;
+    //   padding-top: 0.5rem;
+    //   padding-left: 0.5rem;
+      margin-bottom: 0.5rem;
     //   border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
   }

@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-md justify-content-center" id="mainNavbar"> 
         <div class="container-fluid">
             <router-link class="navbar-brand" to="/home">
-                <img src="https://placehold.co/400x400/bda566/0a3e8b?text=CEL" alt="initials">
+                <img src="../../public/img/CEL-Logo-Transparent.png" alt="initials">
             </router-link>
 
             <button class="navbar-toggler" type="button" @click="toggleNavbar" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

@@ -1,0 +1,149 @@
+@use "_variables" as v;
+
+/* Custom font styles for the "CasaTech" logo */
+.font-casa {
+    font-family: 'Lora', serif;
+}
+.font-tech {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Visually hide text for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Main footer styling */
+.footer {
+  background-color: v.$primary;
+  color: white;
+}
+
+.footer-container {
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;  /* px-4 */
+  padding-right: 1rem;
+
+  /* Divider */
+.divider {
+  border-color: v.$wg-bg-white; /* border-gray-700 */
+  border-top-width:1px;
+}
+}
+
+/* Top Section: Social + Buttons */
+.top-section {
+  padding-top: 1rem;  
+  /* padding-bottom: 2rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; /* Default for mobile */
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem; /* space-x-6 */
+  /* margin-bottom: 1.5rem; */
+}
+
+.social-link {
+  color: #9ca3af; /* text-gray-400 */
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: white; /* hover:text-white */
+}
+
+.social-link i {
+  font-size: 1.5rem; /* Corresponds to fa-2x */
+  line-height: 2rem;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* space-x-4 */
+}
+
+.btn {
+    padding: 0.5rem 1.5rem; /* px-6 py-2 */
+    font-weight: 600;
+    border-radius: 9999px; /* rounded-full */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+
+    &.btn-signin {
+    color: white;
+    border: 1px solid #4b5563; /* border-gray-600 */
+//   background-color: v.$wg-bg-white;
+        &:hover {
+            background-color: v.$wg-gray /* hover:bg-gray-700 */
+        }
+    }
+
+    &.btn-register,  &.btn-logout{
+  color: #111827; /* text-gray-900 */
+  background-color: white;
+  font-weight: 700;
+
+  &:hover {
+  background-color: #e5e7eb; /* hover:bg-gray-200 */
+  color: v.$wg-text-dark;
+}
+
+}
+}
+
+
+
+/* Bottom Section */
+.bottom-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsorship-text {
+  color: v.$wg-gray; /* text-gray-500 */
+  font-size: 0.875rem; /* text-sm */
+  line-height: 1.25rem;
+}
+
+.casatech-link {
+    display: inline-flex; /* Use flexbox to remove space between spans */
+//   align-items: baseline; /* Aligns text with different fonts nicely */
+//   vertical-align: middle; /* Aligns it properly with surrounding text */
+  color: #d1d5db; /* text-gray-300 */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.casatech-link:hover {
+  color: white;
+}
+
+
+.casatech-link:hover {
+  color: white;
+}
+
+/* Responsive styles for medium screens and up (md breakpoint in Tailwind) */
+@media (min-width: 768px) {
+  .top-section {
+    flex-direction: row;
+  }
+  .social-links {
+    margin-bottom: 0;
+  }
+}
