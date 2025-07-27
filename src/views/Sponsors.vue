@@ -14,7 +14,7 @@ const sponsors = ref([
     email: 'support@companyemail.com',
     address: '123 Main st',
     location: 'Harrisonburg, VA',
-    image: '../../public/img/Sponsor1.png',
+    image: '/img/Sponsor1.png',
     description: 'Innovatech Solutions es un proveedor líder de software empresarial en la nube. Nos enorgullece apoyar iniciativas comunitarias que fomentan el crecimiento y la colaboración. Nuestra misión es dotar a las empresas de las herramientas necesarias para triunfar en un mundo digital, y nuestra alianza refleja un profundo compromiso con el desarrollo local y el avance tecnológico.',
     tagline: 'Impulsando las empresas del mañana, hoy.'
   },
@@ -25,7 +25,7 @@ const sponsors = ref([
     name: 'Garcia\'s Eatery',
     address: '456 Rock st',
     location: 'Harrisonburg, VA',
-    image: '../../public/img/Sponsor2.png',
+    image: '/img/Sponsor2.png',
     description: 'Auténtica cocina latina hecha con pasión. Un favorito del barrio para cenas familiares y ocasiones especiales.'
   },
   {
@@ -34,7 +34,7 @@ const sponsors = ref([
     name: 'Martinez Auto Repair',
     address: '546 N Main St',
     location: 'Harrisonburg, VA',
-    image: '../../public/img/Sponsor3.png',
+    image: '/img/Sponsor3.png',
     description: 'Servicio automotriz confiable y honesto. Desde cambios de aceite hasta reparaciones importantes, lo mantenemos seguro en la carretera.'
   },
   // Bronze Tier Sponsors
